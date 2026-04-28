@@ -1,664 +1,717 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <title>Download Stark Rider App | Book Rides in Kerala</title>
+  <meta name="description" content="Download the Stark Rider App to book fast, safe and affordable taxi rides in Kerala. Track drivers in real time, enjoy reliable cab services and travel comfortably with Stark Cabs.">
+  <meta name="keywords" content="Stark rider app, ride booking app Kerala, taxi booking app Kerala, Stark Cabs rider app, cab booking app Kerala">
+  <meta name="author" content="Stark Cabs">
+  <meta name="geo.region" content="IN-KL">
+  <meta name="geo.placename" content="Kerala">
+  <meta name="geo.position" content="9.4981;76.3388">
+  <meta name="ICBM" content="9.4981,76.3388">
+  <meta property="og:title" content="Download Stark Rider App - Taxi Booking in Kerala">
+  <meta property="og:description" content="Download the Stark Rider App and book rides instantly with verified drivers in Kerala.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Download Stark Rider App | Book Rides in Alappuzha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 
-	<meta name="description"
-		content="Download the Stark Rider App to book fast, safe and affordable taxi rides in Alappuzha. Track drivers in real time, enjoy reliable cab services and travel comfortably with Stark Cabs.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-	<meta name="keywords"
-		content="Stark rider app, ride booking app Alappuzha, taxi booking app Alappuzha, Stark Cabs rider app, cab booking app Kerala">
+    :root {
+      --black: #0a0a0b;
+      --dark: #111114;
+      --card-bg: #16161a;
+      --border: rgba(255,255,255,0.07);
+      --orange: #F96D00;
+      --orange-light: #ff8c2a;
+      --orange-glow: rgba(249,109,0,0.15);
+      --white: #ffffff;
+      --muted: rgba(255,255,255,0.45);
+      --text: rgba(255,255,255,0.85);
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
 
-	<meta name="author" content="Stark Cabs">
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 2px; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; opacity: 0.4; }
 
-	<meta name="geo.region" content="IN-KL">
-	<meta name="geo.placename" content="Alappuzha">
-	<meta name="geo.position" content="9.4981;76.3388">
-	<meta name="ICBM" content="9.4981,76.3388">
+    /* NAVBAR */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 0; background: rgba(10,10,11,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: all 0.4s ease; }
+    .navbar.scrolled { padding: 14px 0; }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; color: var(--white); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 9px 22px; border-radius: 100px; transition: background 0.2s, transform 0.2s !important; }
+    .nav-cta:hover { background: var(--orange-light) !important; transform: translateY(-1px); }
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; z-index: 1100; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: transform 0.35s ease, opacity 0.25s ease; transform-origin: center; }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; position: fixed; inset: 0; background: rgba(10,10,11,0.98); backdrop-filter: blur(16px); z-index: 1050; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.35s ease, visibility 0.35s ease; }
+    .mobile-menu.open { opacity: 1; visibility: visible; pointer-events: all; }
+    .mobile-menu a { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--white); text-decoration: none; transform: translateY(10px); opacity: 0; transition: color 0.2s, transform 0.35s ease, opacity 0.35s ease; }
+    .mobile-menu.open a { transform: translateY(0); opacity: 1; }
+    .mobile-menu.open a:nth-child(2) { transition-delay: 0.05s; }
+    .mobile-menu.open a:nth-child(3) { transition-delay: 0.10s; }
+    .mobile-menu.open a:nth-child(4) { transition-delay: 0.15s; }
+    .mobile-menu.open a:nth-child(5) { transition-delay: 0.20s; }
+    .mobile-menu.open a:nth-child(6) { transition-delay: 0.25s; }
+    .mobile-menu.open a:nth-child(7) { transition-delay: 0.30s; }
+    .mobile-menu.open a:nth-child(8) { transition-delay: 0.35s; }
+    .mobile-menu a:hover { color: var(--orange); }
+    .mobile-close { position: absolute; top: 24px; right: 28px; background: rgba(255,255,255,0.07); border: 1px solid var(--border); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.1rem; cursor: pointer; transition: background 0.2s; }
+    .mobile-close:hover { background: var(--orange); border-color: var(--orange); }
 
-	<link rel="icon" href="images/favicon.ico" sizes="any">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-	<link rel="apple-touch-icon" href="images/favicon.png">
+    /* PAGE HERO */
+    .page-hero { min-height: 52vh; display: flex; align-items: flex-end; position: relative; overflow: hidden; padding: 0 0 64px; }
+    .page-hero-bg { position: absolute; inset: 0; background: url('images/bg_2.jpg') center/cover no-repeat; filter: brightness(0.15) saturate(0.6); }
+    .page-hero-gradient { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 80% 40%, rgba(249,109,0,0.1) 0%, transparent 65%), linear-gradient(180deg, transparent 30%, var(--black) 100%); }
+    .page-hero-orb { position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(249,109,0,0.12) 0%, transparent 70%); top: -100px; right: -100px; pointer-events: none; animation: orbFloat 8s ease-in-out infinite; }
+    @keyframes orbFloat { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.04); } }
+    .page-hero-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 0 32px; width: 100%; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; list-style: none; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--orange); }
+    .breadcrumb-sep { color: var(--muted); font-size: 0.75rem; opacity: 0.5; }
+    .breadcrumb-current { color: var(--orange); font-size: 0.82rem; }
+    .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 800; color: var(--white); letter-spacing: -0.03em; line-height: 1.05; }
+    .page-hero h1 span { color: var(--orange); }
 
-	<meta property="og:title" content="Download Stark Rider App - Taxi Booking in Alappuzha">
-	<meta property="og:description"
-		content="Download the Stark Rider App and book rides instantly with verified drivers in Alappuzha.">
-	<meta property="og:type" content="website">
+    /* SHARED */
+    section { padding: 100px 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+    .section-label { display: inline-block; font-size: 0.72rem; font-weight: 600; color: var(--orange); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px; }
+    .section-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; color: var(--white); letter-spacing: -0.025em; line-height: 1.1; }
+    .section-desc { color: var(--muted); font-size: 1rem; line-height: 1.75; max-width: 560px; margin-top: 16px; }
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--orange); color: var(--white); text-decoration: none; padding: 14px 30px; border-radius: 100px; font-weight: 600; font-size: 0.95rem; transition: all 0.25s ease; border: none; cursor: pointer; }
+    .btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(249,109,0,0.35); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--white); text-decoration: none; padding: 14px 30px; border-radius: 100px; font-weight: 500; font-size: 0.95rem; border: 1px solid var(--border); transition: all 0.25s ease; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); transform: translateY(-2px); }
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
-		rel="stylesheet">
+    /* APP HERO BANNER */
+    .app-hero { background: var(--dark); }
+    .app-hero-inner {
+      background: linear-gradient(135deg, #1a1006 0%, #1c1208 50%, #1a1006 100%);
+      border: 1px solid rgba(249,109,0,0.15); border-radius: 32px; overflow: hidden;
+      display: grid; grid-template-columns: 1fr 1fr; min-height: 460px; position: relative;
+    }
+    .app-hero-inner::before { content: ''; position: absolute; top: -80px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(249,109,0,0.1) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    .app-hero-content { padding: 64px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1; }
+    .app-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(249,109,0,0.12); border: 1px solid rgba(249,109,0,0.3); border-radius: 100px; padding: 6px 16px; font-size: 0.75rem; font-weight: 600; color: var(--orange-light); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 24px; width: fit-content; }
+    .app-badge::before { content: ''; width: 6px; height: 6px; background: var(--orange); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.7); } }
+    .app-hero-content h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; color: var(--white); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 16px; }
+    .app-hero-content h2 span { color: var(--orange); }
+    .app-hero-content p { color: var(--muted); font-size: 0.95rem; line-height: 1.75; max-width: 400px; margin-bottom: 36px; }
+    .app-download-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .app-dl-btn { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 13px 20px; text-decoration: none; color: var(--white); transition: all 0.25s; }
+    .app-dl-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(249,109,0,0.4); transform: translateY(-2px); }
+    .app-dl-btn.primary-dl { background: var(--orange); border-color: var(--orange); }
+    .app-dl-btn.primary-dl:hover { background: var(--orange-light); border-color: var(--orange-light); }
+    .app-dl-text small { display: block; font-size: 0.62rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.06em; }
+    .app-dl-text strong { display: block; font-size: 0.95rem; font-weight: 600; }
+    .app-hero-img { position: relative; overflow: hidden; }
+    .app-hero-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5) saturate(0.8); transition: transform 0.6s ease; }
+    .app-hero-inner:hover .app-hero-img img { transform: scale(1.04); }
+    .app-hero-img-overlay { position: absolute; inset: 0; background: linear-gradient(270deg, transparent 40%, #1a1006 100%); }
 
-	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
+    /* APP FEATURES STRIP */
+    .strip-section { background: var(--black); padding: 60px 0; }
+    .strip-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+    .strip-item { background: var(--card-bg); padding: 30px 20px; text-align: center; transition: background 0.3s; }
+    .strip-item:hover { background: #1c1c22; }
+    .strip-icon { width: 48px; height: 48px; background: var(--orange-glow); border: 1px solid rgba(249,109,0,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; transition: background 0.3s; }
+    .strip-item:hover .strip-icon { background: rgba(249,109,0,0.25); }
+    .strip-item h4 { font-family: var(--font-display); font-size: 0.88rem; font-weight: 700; color: var(--white); margin-bottom: 3px; }
+    .strip-item p { font-size: 0.72rem; color: var(--muted); }
 
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
+    /* FEATURES TABS */
+    .tabs-section { background: var(--dark); }
+    .tabs-header { text-align: center; margin-bottom: 52px; }
+    .tabs-header .section-desc { margin: 16px auto 0; }
+    .tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 48px; flex-wrap: wrap; }
+    .tab-btn { background: var(--card-bg); border: 1px solid var(--border); color: var(--muted); font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; padding: 10px 22px; border-radius: 100px; cursor: pointer; transition: all 0.25s; }
+    .tab-btn:hover { border-color: rgba(249,109,0,0.3); color: var(--white); }
+    .tab-btn.active { background: var(--orange); border-color: var(--orange); color: var(--white); }
+    .tab-panel { display: none; animation: fadeUp 0.4s ease; }
+    .tab-panel.active { display: block; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
-	<link rel="stylesheet" href="css/aos.css">
-	<link rel="stylesheet" href="css/ionicons.min.css">
+    /* features grid */
+    .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .feat-item { display: flex; align-items: center; gap: 12px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; transition: border-color 0.3s, transform 0.3s; }
+    .feat-item:hover { border-color: rgba(249,109,0,0.25); transform: translateY(-2px); }
+    .feat-check { width: 22px; height: 22px; background: var(--orange-glow); border: 1px solid rgba(249,109,0,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .feat-item span { font-size: 0.88rem; color: var(--text); font-weight: 500; }
 
-	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="css/jquery.timepicker.css">
+    /* description */
+    .desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .desc-img { border-radius: 20px; overflow: hidden; aspect-ratio: 4/3; }
+    .desc-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); transition: transform 0.6s; }
+    .desc-img:hover img { transform: scale(1.04); }
+    .desc-content p { color: var(--muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
 
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
+    /* reviews */
+    .reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .review-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 28px; transition: border-color 0.3s, transform 0.3s; }
+    .review-card:hover { border-color: rgba(249,109,0,0.25); transform: translateY(-4px); }
+    .review-stars { display: flex; gap: 3px; margin-bottom: 12px; }
+    .review-star { color: var(--orange); font-size: 0.85rem; }
+    .review-text { font-size: 0.88rem; color: var(--text); line-height: 1.75; margin-bottom: 20px; }
+    .review-author { display: flex; align-items: center; gap: 10px; }
+    .review-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--orange), #ff5500); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; font-size: 0.85rem; color: var(--white); flex-shrink: 0; }
+    .review-name { font-size: 0.88rem; font-weight: 600; color: var(--white); }
+    .review-date { font-size: 0.72rem; color: var(--muted); }
 
+    /* RATING SUMMARY */
+    .rating-section { background: var(--black); }
+    .rating-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center; }
+    .rating-big { text-align: center; background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 48px 32px; }
+    .rating-number { font-family: var(--font-display); font-size: 5rem; font-weight: 800; color: var(--white); line-height: 1; }
+    .rating-number span { color: var(--orange); }
+    .rating-stars-big { display: flex; gap: 6px; justify-content: center; margin: 16px 0 12px; }
+    .rating-star-big { color: var(--orange); font-size: 1.5rem; }
+    .rating-count { font-size: 0.82rem; color: var(--muted); }
+    .rating-bars { display: flex; flex-direction: column; gap: 14px; }
+    .rating-row { display: flex; align-items: center; gap: 14px; }
+    .rating-label { font-size: 0.8rem; color: var(--muted); width: 36px; flex-shrink: 0; display: flex; align-items: center; gap: 4px; }
+    .rating-label span { color: var(--orange); font-size: 0.7rem; }
+    .rating-bar-wrap { flex: 1; background: var(--border); border-radius: 100px; height: 8px; overflow: hidden; }
+    .rating-bar { height: 100%; background: linear-gradient(90deg, var(--orange), var(--orange-light)); border-radius: 100px; }
+    .rating-pct { font-size: 0.78rem; color: var(--muted); width: 36px; text-align: right; flex-shrink: 0; }
+    .rating-total { font-size: 0.75rem; color: var(--muted); width: 56px; flex-shrink: 0; }
+
+    /* HOW TO DOWNLOAD */
+    .how-section { background: var(--dark); }
+    .how-header { text-align: center; margin-bottom: 64px; }
+    .how-header .section-desc { margin: 16px auto 0; }
+    .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+    .how-grid::before { content: ''; position: absolute; top: 44px; left: calc(12.5% + 26px); right: calc(12.5% + 26px); height: 1px; background: linear-gradient(90deg, transparent, var(--border) 15%, var(--border) 85%, transparent); }
+    .how-step { text-align: center; padding: 0 16px; }
+    .how-num { width: 52px; height: 52px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; font-family: var(--font-display); font-weight: 800; font-size: 1rem; color: var(--orange); position: relative; z-index: 1; transition: background 0.3s, border-color 0.3s, color 0.3s; }
+    .how-step:hover .how-num { background: var(--orange); color: var(--white); border-color: var(--orange); }
+    .how-step h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .how-step p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; }
+
+    /* ALSO DRIVER CTA */
+    .also-driver { background: var(--black); padding: 0 0 100px; }
+    .also-driver-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; padding: 48px 52px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; position: relative; overflow: hidden; transition: border-color 0.3s; }
+    .also-driver-card:hover { border-color: rgba(249,109,0,0.2); }
+    .also-driver-card::before { content: ''; position: absolute; top: -60px; right: -60px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(249,109,0,0.07) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    .also-driver-text h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--white); letter-spacing: -0.02em; margin-bottom: 8px; }
+    .also-driver-text h3 span { color: var(--orange); }
+    .also-driver-text p { color: var(--muted); font-size: 0.9rem; max-width: 480px; }
+
+    /* CTA */
+    .cta-section { background: var(--dark); padding: 80px 0; }
+    .cta-banner { background: linear-gradient(135deg, #1a1006 0%, #1e140a 40%, #1a1006 100%); border: 1px solid rgba(249,109,0,0.15); border-radius: 32px; padding: 70px 60px; text-align: center; position: relative; overflow: hidden; }
+    .cta-banner::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(circle, rgba(249,109,0,0.12) 0%, transparent 65%); pointer-events: none; }
+    .cta-banner h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; color: var(--white); letter-spacing: -0.025em; margin-bottom: 16px; position: relative; }
+    .cta-banner h2 span { color: var(--orange); }
+    .cta-banner p { color: var(--muted); font-size: 1rem; max-width: 500px; margin: 0 auto 36px; position: relative; }
+    .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+    /* FOOTER */
+    footer { background: var(--black); border-top: 1px solid var(--border); padding: 70px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; margin-bottom: 60px; }
+    .footer-brand .nav-logo { display: inline-block; margin-bottom: 16px; font-size: 1.6rem; }
+    .footer-brand p { font-size: 0.875rem; color: var(--muted); line-height: 1.7; max-width: 280px; }
+    .footer-socials { display: flex; gap: 10px; margin-top: 24px; }
+    .social-btn { width: 38px; height: 38px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--muted); transition: all 0.2s; }
+    .social-btn:hover { background: var(--orange); border-color: var(--orange); color: var(--white); }
+    .footer-col h4 { font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    .contact-icon { color: var(--orange); margin-top: 2px; flex-shrink: 0; }
+    .contact-item a { color: var(--muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .contact-item a:hover { color: var(--white); }
+    .contact-item span { color: var(--muted); font-size: 0.875rem; }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.8rem; color: var(--muted); }
+    .footer-bottom a { color: var(--muted); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--orange); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .strip-grid { grid-template-columns: repeat(3, 1fr); }
+      .rating-grid { grid-template-columns: 1fr; }
+      .rating-big { max-width: 300px; margin: 0 auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .app-hero-inner { grid-template-columns: 1fr; }
+      .app-hero-img { height: 220px; }
+      .app-hero-img-overlay { background: linear-gradient(0deg, #1a1006 0%, transparent 60%); }
+      .app-hero-content { padding: 36px 28px; }
+      .strip-grid { grid-template-columns: repeat(2, 1fr); }
+      .feat-grid { grid-template-columns: 1fr; }
+      .desc-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .how-grid { grid-template-columns: repeat(2, 1fr); }
+      .how-grid::before { display: none; }
+      .also-driver-card { padding: 36px 28px; flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .cta-banner { padding: 44px 24px; }
+    }
+    @media (max-width: 480px) {
+      .how-grid { grid-template-columns: 1fr; }
+      .strip-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
-
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-		<div class="container">
-			<a class="navbar-brand" href="index.html">Stark <span>Cabs</span></a> <button class="navbar-toggler"
-				type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
-				aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
-
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
-
-					<li class="nav-item ">
-						<a href="index.html" class="nav-link">Home</a>
-					</li>
-
-					<li class="nav-item">
-						<a href="about.html" class="nav-link">About</a>
-					</li>
-
-					<li class="nav-item">
-						<a href="services.html" class="nav-link">Services</a>
-					</li>
-
-					<li class="nav-item">
-						<a href="driver.html" class="nav-link">Drive With Us</a>
-					</li>
-
-					<li class="nav-item active">
-						<a href="download.html" class="nav-link">Download App</a>
-					</li>
-					<li class="nav-item">
-						<a href="blog.html" class="nav-link">Blog</a>
-					</li>
-
-					<li class="nav-item">
-						<a href="contact.html" class="nav-link">Contact</a>
-					</li>
-
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- END nav -->
-
-	<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_2.jpg');"
-		data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-				<div class="col-md-9 ftco-animate pb-5">
-					<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-									class="ion-ios-arrow-forward"></i></a></span> <span>Download <i
-								class="ion-ios-arrow-forward"></i></span></p>
-					<h1 class="mb-3 bread">Download Our Application</h1>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="ftco-section ftco-car-details">
-		<div class="container">
-
-			<div class="row justify-content-center">
-				<div class="col-md-12">
-
-					<div class="car-details">
-						<div class="img" style="background-image: url(images/bg_3.jpg);"></div>
-
-						<div class="text text-center">
-							<span class="subheading">Stark Rider App</span>
-							<h2>Book Rides Instantly in Alappuzha</h2>
-
-							<a href="https://play.google.com/store/apps/details?id=com.starkcabs.stark"
-								class="btn btn-primary mt-3">
-								Download Rider App
-							</a>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-
-			<div class="row">
-
-				<div class="col-md d-flex align-self-stretch ftco-animate">
-					<div class="media block-6 services">
-						<div class="media-body py-md-4">
-							<div class="d-flex mb-3 align-items-center">
-								<div class="icon"><span class="flaticon-route"></span></div>
-								<div class="text">
-									<h3 class="heading mb-0 pl-3">
-										Instant Booking
-										<span>Nearby Drivers</span>
-									</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="col-md d-flex align-self-stretch ftco-animate">
-					<div class="media block-6 services">
-						<div class="media-body py-md-4">
-							<div class="d-flex mb-3 align-items-center">
-								<div class="icon"><span class="flaticon-online-booking"></span></div>
-								<div class="text">
-									<h3 class="heading mb-0 pl-3">
-										Live Tracking
-										<span>Real-time GPS</span>
-									</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="col-md d-flex align-self-stretch ftco-animate">
-					<div class="media block-6 services">
-						<div class="media-body py-md-4">
-							<div class="d-flex mb-3 align-items-center">
-								<div class="icon"><span class="flaticon-rent"></span></div>
-								<div class="text">
-									<h3 class="heading mb-0 pl-3">
-										Affordable Fares
-										<span>Transparent Pricing</span>
-									</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="col-md d-flex align-self-stretch ftco-animate">
-					<div class="media block-6 services">
-						<div class="media-body py-md-4">
-							<div class="d-flex mb-3 align-items-center">
-								<div class="icon"><span class="flaticon-customer-support"></span></div>
-								<div class="text">
-									<h3 class="heading mb-0 pl-3">
-										Driver Ratings
-										<span>Verified Drivers</span>
-									</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="col-md d-flex align-self-stretch ftco-animate">
-					<div class="media block-6 services">
-						<div class="media-body py-md-4">
-							<div class="d-flex mb-3 align-items-center">
-								<div class="icon"><span class="flaticon-online-booking"></span></div>
-								<div class="text">
-									<h3 class="heading mb-0 pl-3">
-										24/7 Service
-										<span>Anytime Rides</span>
-									</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-
-
-			<div class="row">
-				<div class="col-md-12 pills">
-
-					<div class="bd-example bd-example-tabs">
-
-						<div class="d-flex justify-content-center">
-
-							<ul class="nav nav-pills mb-3" role="tablist">
-
-								<li class="nav-item">
-									<a class="nav-link active" data-toggle="pill" href="#features">Features</a>
-								</li>
-
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="pill" href="#description">Description</a>
-								</li>
-
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="pill" href="#review">Reviews</a>
-								</li>
-
-							</ul>
-
-						</div>
-
-
-
-						<div class="tab-content">
-
-							<div class="tab-pane fade show active" id="features">
-
-								<div class="row">
-
-									<div class="col-md-4">
-										<ul class="features">
-											<li class="check"><span class="ion-ios-checkmark"></span>Quick Ride Booking
-											</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Live GPS Tracking
-											</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Safe Drivers</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Transparent Pricing
-											</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Ride History</li>
-										</ul>
-									</div>
-
-									<div class="col-md-4">
-										<ul class="features">
-											<li class="check"><span class="ion-ios-checkmark"></span>Driver Ratings</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Secure Booking</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Multiple Locations
-											</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Instant
-												Notifications</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Easy Interface</li>
-										</ul>
-									</div>
-
-									<div class="col-md-4">
-										<ul class="features">
-											<li class="check"><span class="ion-ios-checkmark"></span>Fast Driver
-												Matching</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Comfortable Rides
-											</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Affordable Travel
-											</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>Secure Platform
-											</li>
-											<li class="check"><span class="ion-ios-checkmark"></span>24/7 Availability
-											</li>
-										</ul>
-									</div>
-
-								</div>
-
-							</div>
-
-
-
-							<div class="tab-pane fade" id="description">
-
-								<p>
-									The Stark Rider App makes travel across Alappuzha simple and convenient. With just a
-									few taps,
-									you can book a ride, connect with nearby drivers and reach your destination safely.
-								</p>
-
-								<p>
-									Our platform offers reliable taxi services with real-time tracking, verified drivers
-									and
-									affordable pricing. Whether it’s a short city trip or a longer ride,
-									Stark Cabs ensures a smooth and comfortable journey.
-								</p>
-
-							</div>
-
-
-
-							<div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="pills-review-tab">
-								<div class="row">
-									<div class="col-md-7">
-										<h3 class="head">Reviews</h3>
-										<div class="review d-flex">
-											<div class="desc">
-												<h4>
-													<span class="text-left">Arjun Nair</span>
-													<span class="text-right">18 March 2026</span>
-												</h4>
-
-												<p class="star">
-													<span>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-													</span>
-													<span class="text-right"><a href="#" class="reply"><i
-																class="icon-reply"></i></a></span>
-												</p>
-
-												<p>
-													Booking rides with the Stark Rider App is very simple. Drivers
-													arrive quickly and the ride experience has always been smooth.
-												</p>
-											</div>
-										</div>
-
-
-										<div class="review d-flex">
-											<div class="desc">
-												<h4>
-													<span class="text-left">Sneha Menon</span>
-													<span class="text-right">14 March 2026</span>
-												</h4>
-
-												<p class="star">
-													<span>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-													</span>
-													<span class="text-right"><a href="#" class="reply"><i
-																class="icon-reply"></i></a></span>
-												</p>
-
-												<p>
-													The app interface is clean and easy to use. I can book a taxi within
-													seconds and track the driver live on the map.
-												</p>
-											</div>
-										</div>
-
-
-										<div class="review d-flex">
-											<div class="desc">
-												<h4>
-													<span class="text-left">Vishnu Raj</span>
-													<span class="text-right">9 March 2026</span>
-												</h4>
-
-												<p class="star">
-													<span>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-													</span>
-													<span class="text-right"><a href="#" class="reply"><i
-																class="icon-reply"></i></a></span>
-												</p>
-
-												<p>
-													Very reliable taxi service in Alappuzha. The pricing is fair and
-													drivers are friendly and professional.
-												</p>
-											</div>
-										</div>
-
-
-										<div class="review d-flex">
-											<div class="desc">
-												<h4>
-													<span class="text-left">Athira S</span>
-													<span class="text-right">3 March 2026</span>
-												</h4>
-
-												<p class="star">
-													<span>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-													</span>
-													<span class="text-right"><a href="#" class="reply"><i
-																class="icon-reply"></i></a></span>
-												</p>
-
-												<p>
-													I use Stark Cabs for my daily travel. The drivers are polite and the
-													rides are comfortable every time.
-												</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-5">
-										<div class="rating-wrap">
-											<h3 class="head">Give a Review</h3>
-											<div class="wrap">
-												<p class="star">
-													<span>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														(98%)
-													</span>
-													<span>20 Reviews</span>
-												</p>
-												<p class="star">
-													<span>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														(85%)
-													</span>
-													<span>10 Reviews</span>
-												</p>
-												<p class="star">
-													<span>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														(70%)
-													</span>
-													<span>5 Reviews</span>
-												</p>
-												<p class="star">
-													<span>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														(10%)
-													</span>
-													<span>0 Reviews</span>
-												</p>
-												<p class="star">
-													<span>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														<i class="ion-ios-star"></i>
-														(0%)
-													</span>
-													<span>0 Reviews</span>
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-
-	<footer class="ftco-footer ftco-bg-dark ftco-section">
-		<div class="container">
-
-			<div class="row mb-5">
-
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Stark Cabs</h2>
-
-						<p>
-							Stark Cabs is a modern ride booking platform providing reliable and affordable
-							cab services in Alappuzha, Kerala. Our mobile apps connect riders with nearby
-							drivers instantly for safe and comfortable travel.
-						</p>
-
-						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-							<li class="ftco-animate"><a
-									href="https://www.instagram.com/stark_cabs?igsh=MTFmN2Nwd3FieHJnMA%3D%3D&utm_source=qr"><span
-										class="icon-facebook"></span></a></li>
-							<li class="ftco-animate"><a
-									href="https://www.instagram.com/stark_cabs?igsh=MTFmN2Nwd3FieHJnMA%3D%3D&utm_source=qr"><span
-										class="icon-instagram"></span></a></li>
-							<li class="ftco-animate"><a
-									href="https://www.instagram.com/stark_cabs?igsh=MTFmN2Nwd3FieHJnMA%3D%3D&utm_source=qr"><span
-										class="icon-whatsapp"></span></a></li>
-						</ul>
-					</div>
-				</div>
-
-
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4 ml-md-5">
-						<h2 class="ftco-heading-2">Quick Links</h2>
-
-						<ul class="list-unstyled">
-							<li><a href="index.html" class="py-2 d-block">Home</a></li>
-							<li><a href="about.html" class="py-2 d-block">About Stark Cabs</a></li>
-							<li><a href="services.html" class="py-2 d-block">Cab Services</a></li>
-							<li><a href="driver.html" class="py-2 d-block">Become a Driver</a></li>
-							<li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
-						</ul>
-
-					</div>
-				</div>
-
-
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Our Services</h2>
-
-						<ul class="list-unstyled">
-							<li><a href="services.html" class="py-2 d-block">Local Taxi Service</a></li>
-							<li><a href="services.html" class="py-2 d-block">Airport Pickup & Drop</a></li>
-							<li><a href="services.html" class="py-2 d-block">Outstation Trips</a></li>
-							<li><a href="services.html" class="py-2 d-block">Ride Booking App</a></li>
-							<li><a href="services.html" class="py-2 d-block">Driver Partner Program</a></li>
-						</ul>
-
-					</div>
-				</div>
-
-
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Contact Us</h2>
-
-						<div class="block-23 mb-3">
-							<ul>
-
-								<li>
-									<span class="icon icon-map-marker"></span>
-									<span class="text">
-										Alappuzha, Kerala, India
-									</span>
-								</li>
-
-								<li>
-									<a href="tel:+917399200800">
-										<span class="icon icon-phone"></span>
-										<span class="text">+91 7399 200 800</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="mailto:starkopc@gmail.com">
-										<span class="icon icon-envelope"></span>
-										<span class="text">starkopc@gmail.com</span>
-									</a>
-								</li>
-
-							</ul>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-
-
-			<div class="row">
-				<div class="col-md-12 text-center">
-
-					<p>
-						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script>
-						Stark Cabs. All rights reserved.
-					</p>
-
-				</div>
-			</div>
-
-		</div>
-	</footer>
-
-
-
-
-	<!-- loader -->
-	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-				stroke="#F96D00" />
-		</svg></div>
-
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/aos.js"></script>
-	<script src="js/jquery.animateNumber.min.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="js/jquery.timepicker.min.js"></script>
-	<script src="js/scrollax.min.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-	<script src="js/google-map.js"></script>
-	<script src="js/main.js"></script>
-
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Stark <span>Cabs</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="driver.html">Drive With Us</a></li>
+        <li><a href="download.html" class="active">Download</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&#x2715;</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="driver.html">Drive With Us</a>
+    <a href="download.html">Download</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-gradient"></div>
+    <div class="page-hero-orb"></div>
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><span class="breadcrumb-sep">›</span></li>
+        <li><span class="breadcrumb-current">Download App</span></li>
+      </nav>
+      <h1>Download Our <span>App</span></h1>
+    </div>
+  </section>
+
+  <!-- APP HERO BANNER -->
+  <section class="app-hero">
+    <div class="container">
+      <div class="app-hero-inner reveal">
+        <div class="app-hero-content">
+          <div class="app-badge">Available Now on Android</div>
+          <h2>Book Rides Instantly<br>in <span>Kerala</span></h2>
+          <p>Download the Stark Rider App and get matched with a verified nearby driver in seconds. Fast, safe, affordable — all at your fingertips.</p>
+          <div class="app-download-btns">
+            <a href="https://play.google.com/store/apps/details?id=com.starkcabs.stark" class="app-dl-btn primary-dl">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.98.15l12.08-12.08-3.33-3.33L3.18 23.76zM20.65 10.36l-2.95-1.67L14.34 12l3.36 3.36 2.95-1.67c.84-.48.84-2.85 0-3.33zM2.21 1.08C2.08 1.3 2 1.58 2 1.9v20.2c0 .32.08.6.21.82l.1.1L14.1 11.12v-.24L2.31.98l-.1.1zM3.18.24l9.73 9.73-3.33 3.33L3.18.24z"/></svg>
+              <div class="app-dl-text">
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+            <a href="#" class="app-dl-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.42c1.32.07 2.22.74 2.98.76 1.21-.15 2.35-.88 3.65-.74 1.55.18 2.73.83 3.5 2.05-3.24 1.93-2.77 6.03.47 7.45-.51 1.44-1.18 2.87-2.6 4.34zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+              <div class="app-dl-text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="app-hero-img">
+          <img src="images/bg_3.jpg" alt="Stark Rider App - Book Rides in Kerala">
+          <div class="app-hero-img-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <section class="strip-section">
+    <div class="container">
+      <div class="strip-grid reveal">
+        <div class="strip-item">
+          <div class="strip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h4>Instant Booking</h4><p>Nearby Drivers</p>
+        </div>
+        <div class="strip-item">
+          <div class="strip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h4>Live Tracking</h4><p>Real-time GPS</p>
+        </div>
+        <div class="strip-item">
+          <div class="strip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h4>Affordable Fares</h4><p>Transparent Pricing</p>
+        </div>
+        <div class="strip-item">
+          <div class="strip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4>Driver Ratings</h4><p>Verified Drivers</p>
+        </div>
+        <div class="strip-item">
+          <div class="strip-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h4>24/7 Service</h4><p>Anytime Rides</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES TABS -->
+  <section class="tabs-section">
+    <div class="container">
+      <div class="tabs-header reveal">
+        <span class="section-label">Stark Rider App</span>
+        <h2 class="section-title">Everything You Need,<br>In One App</h2>
+        <p class="section-desc">The Stark Rider App is designed to make booking a cab in Kerala as simple and quick as possible.</p>
+      </div>
+
+      <div class="tabs reveal">
+        <button class="tab-btn active" onclick="showTab('features', this)">App Features</button>
+        <button class="tab-btn" onclick="showTab('description', this)">Description</button>
+        <button class="tab-btn" onclick="showTab('reviews', this)">Rider Reviews</button>
+      </div>
+
+      <!-- Features Tab -->
+      <div class="tab-panel active" id="tab-features">
+        <div class="feat-grid">
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Quick Ride Booking</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Live GPS Tracking</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Verified Safe Drivers</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Transparent Pricing</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Ride History</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Driver Ratings</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Secure Booking</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Multiple Locations</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Instant Notifications</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Easy Interface</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Fast Driver Matching</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Comfortable Rides</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Affordable Travel</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Secure Platform</span></div>
+          <div class="feat-item"><div class="feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>24/7 Availability</span></div>
+        </div>
+      </div>
+
+      <!-- Description Tab -->
+      <div class="tab-panel" id="tab-description">
+        <div class="desc-grid">
+          <div class="desc-img">
+            <img src="images/bg_3.jpg" alt="Stark Rider App Description">
+          </div>
+          <div class="desc-content">
+            <span class="section-label" style="margin-bottom:12px;">About the Rider App</span>
+            <h3 style="font-family:var(--font-display); font-size:1.6rem; font-weight:800; color:var(--white); letter-spacing:-0.02em; margin-bottom:20px; line-height:1.2;">Your Travel Partner<br>Across Kerala</h3>
+            <p>The Stark Rider App makes travel across Kerala simple and convenient. With just a few taps, you can book a ride, connect with nearby verified drivers and reach your destination safely.</p>
+            <p>Our platform offers reliable taxi services with real-time tracking, verified drivers and affordable pricing. Whether it's a short city trip or a longer outstation ride, Stark Cabs ensures a smooth and comfortable journey every time.</p>
+            <p>From the moment you open the app to the moment you arrive, every detail is designed to give you a seamless, stress-free travel experience in Kerala.</p>
+            <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
+              <a href="https://play.google.com/store/apps/details?id=com.starkcabs.stark" class="btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.98.15l12.08-12.08-3.33-3.33L3.18 23.76zM20.65 10.36l-2.95-1.67L14.34 12l3.36 3.36 2.95-1.67c.84-.48.84-2.85 0-3.33zM2.21 1.08C2.08 1.3 2 1.58 2 1.9v20.2c0 .32.08.6.21.82l.1.1L14.1 11.12v-.24L2.31.98l-.1.1z"/></svg>
+                Download on Play Store
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Tab -->
+      <div class="tab-panel" id="tab-reviews">
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars"><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span></div>
+            <p class="review-text">Booking rides with the Stark Rider App is very simple. Drivers arrive quickly and the ride experience has always been smooth. Highly recommend!</p>
+            <div class="review-author">
+              <div class="review-avatar">AN</div>
+              <div><div class="review-name">Arjun Nair</div><div class="review-date">18 March 2026</div></div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars"><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span></div>
+            <p class="review-text">The app interface is clean and easy to use. I can book a taxi within seconds and track the driver live on the map. Best taxi app in Kerala!</p>
+            <div class="review-author">
+              <div class="review-avatar" style="background:linear-gradient(135deg,#e65c00,#f9d423);">SM</div>
+              <div><div class="review-name">Sneha Menon</div><div class="review-date">14 March 2026</div></div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars"><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span></div>
+            <p class="review-text">Very reliable taxi service in Kerala. The pricing is fair and drivers are friendly and professional every single time I travel.</p>
+            <div class="review-author">
+              <div class="review-avatar" style="background:linear-gradient(135deg,#11998e,#38ef7d);">VR</div>
+              <div><div class="review-name">Vishnu Raj</div><div class="review-date">9 March 2026</div></div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars"><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span><span class="review-star">★</span></div>
+            <p class="review-text">I use Stark Cabs for my daily travel. The drivers are polite, the rides are comfortable, and the app makes everything effortless. Love it!</p>
+            <div class="review-author">
+              <div class="review-avatar" style="background:linear-gradient(135deg,#8e2de2,#4a00e0);">AS</div>
+              <div><div class="review-name">Athira S</div><div class="review-date">3 March 2026</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RATING SUMMARY -->
+  <section class="rating-section">
+    <div class="container">
+      <div class="rating-grid reveal">
+        <div class="rating-big">
+          <div class="rating-number">4.8<span>★</span></div>
+          <div class="rating-stars-big">
+            <span class="rating-star-big">★</span><span class="rating-star-big">★</span><span class="rating-star-big">★</span><span class="rating-star-big">★</span><span class="rating-star-big" style="opacity:0.4;">★</span>
+          </div>
+          <div class="rating-count">Based on 35 Reviews</div>
+        </div>
+        <div class="rating-bars">
+          <div style="margin-bottom:20px;">
+            <span class="section-label">App Ratings</span>
+            <h3 style="font-family:var(--font-display); font-size:1.6rem; font-weight:800; color:var(--white); letter-spacing:-0.02em; line-height:1.2;">Riders Love<br>Stark Cabs</h3>
+          </div>
+          <div class="rating-row">
+            <div class="rating-label">5 <span>★</span></div>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:98%"></div></div>
+            <div class="rating-pct">98%</div>
+            <div class="rating-total">20 reviews</div>
+          </div>
+          <div class="rating-row">
+            <div class="rating-label">4 <span>★</span></div>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:85%; opacity:0.85;"></div></div>
+            <div class="rating-pct">85%</div>
+            <div class="rating-total">10 reviews</div>
+          </div>
+          <div class="rating-row">
+            <div class="rating-label">3 <span>★</span></div>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:70%; opacity:0.7;"></div></div>
+            <div class="rating-pct">70%</div>
+            <div class="rating-total">5 reviews</div>
+          </div>
+          <div class="rating-row">
+            <div class="rating-label">2 <span>★</span></div>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:10%; opacity:0.5;"></div></div>
+            <div class="rating-pct">10%</div>
+            <div class="rating-total">0 reviews</div>
+          </div>
+          <div class="rating-row">
+            <div class="rating-label">1 <span>★</span></div>
+            <div class="rating-bar-wrap"><div class="rating-bar" style="width:2%; opacity:0.3;"></div></div>
+            <div class="rating-pct">0%</div>
+            <div class="rating-total">0 reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO DOWNLOAD -->
+  <section class="how-section">
+    <div class="container">
+      <div class="how-header reveal">
+        <span class="section-label">Getting Started</span>
+        <h2 class="section-title">How to Get Started</h2>
+        <p class="section-desc">Download the Stark Rider App and book your first ride in Kerala in four simple steps.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-step reveal">
+          <div class="how-num">1</div>
+          <h3>Download the App</h3>
+          <p>Install the Stark Rider App from Google Play Store or the App Store on your phone.</p>
+        </div>
+        <div class="how-step reveal reveal-delay-1">
+          <div class="how-num">2</div>
+          <h3>Create an Account</h3>
+          <p>Sign up with your phone number and verify your account to get started in seconds.</p>
+        </div>
+        <div class="how-step reveal reveal-delay-2">
+          <div class="how-num">3</div>
+          <h3>Set Your Location</h3>
+          <p>Enter your pickup location and destination within the app to see nearby drivers.</p>
+        </div>
+        <div class="how-step reveal reveal-delay-3">
+          <div class="how-num">4</div>
+          <h3>Enjoy Your Ride</h3>
+          <p>Confirm your ride, get matched with a driver, and travel safely to your destination.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALSO DRIVER CTA -->
+  <section class="also-driver">
+    <div class="container">
+      <div class="also-driver-card reveal">
+        <div class="also-driver-text">
+          <h3>Are You a Driver? Join as a <span>Stark Partner</span></h3>
+          <p>Earn flexible income by accepting ride requests in Kerala. Download the Stark Driver App and start earning today on your own schedule.</p>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.starkcabs.starkdriver" class="btn-primary" style="flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.98.15l12.08-12.08-3.33-3.33L3.18 23.76zM20.65 10.36l-2.95-1.67L14.34 12l3.36 3.36 2.95-1.67c.84-.48.84-2.85 0-3.33zM2.21 1.08C2.08 1.3 2 1.58 2 1.9v20.2c0 .32.08.6.21.82l.1.1L14.1 11.12v-.24L2.31.98l-.1.1z"/></svg>
+          Download Driver App
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2>Ready to Book Your<br><span>First Ride?</span></h2>
+        <p>Download the Stark Rider App now and experience the fastest, safest cab service in Kerala. Your ride is just a tap away.</p>
+        <div class="cta-actions">
+          <a href="https://play.google.com/store/apps/details?id=com.starkcabs.stark" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.22.98.15l12.08-12.08-3.33-3.33L3.18 23.76zM20.65 10.36l-2.95-1.67L14.34 12l3.36 3.36 2.95-1.67c.84-.48.84-2.85 0-3.33zM2.21 1.08C2.08 1.3 2 1.58 2 1.9v20.2c0 .32.08.6.21.82l.1.1L14.1 11.12v-.24L2.31.98l-.1.1z"/></svg>
+            Get the Rider App
+          </a>
+          <a href="services.html" class="btn-ghost">
+            View Our Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">Stark <span>Cabs</span></a>
+          <p>A modern ride booking platform providing reliable and affordable cab services in Kerala, Kerala. Our mobile apps connect riders with nearby verified drivers instantly.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/stark_cabs?igsh=MTFmN2Nwd3FieHJnMA%3D%3D&utm_source=qr" class="social-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.instagram.com/stark_cabs?igsh=MTFmN2Nwd3FieHJnMA%3D%3D&utm_source=qr" class="social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/stark_cabs?igsh=MTFmN2Nwd3FieHJnMA%3D%3D&utm_source=qr" class="social-btn" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stark Cabs</a></li>
+            <li><a href="services.html">Cab Services</a></li>
+            <li><a href="driver.html">Become a Driver</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html">Local Taxi Service</a></li>
+            <li><a href="services.html">Airport Pickup &amp; Drop</a></li>
+            <li><a href="services.html">Outstation Trips</a></li>
+            <li><a href="services.html">Ride Booking App</a></li>
+            <li><a href="driver.html">Driver Partner Program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="contact-item">
+            <span class="contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span>Alappuzha, Kerala, India</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.07 19.79 19.79 0 0 1 1.61.45 2 2 0 0 1 3.62 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <a href="tel:+917399200800">+91 7399 200 800</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+            <a href="mailto:starkopc@gmail.com">starkopc@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Stark Cabs. All rights reserved.</p>
+        <div style="display:flex; gap:20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    function openMenu() { mobileMenu.classList.add('open'); hamburger.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('open'); hamburger.classList.remove('active'); document.body.style.overflow = ''; }
+    hamburger.addEventListener('click', () => mobileMenu.classList.contains('open') ? closeMenu() : openMenu());
+    mobileClose.addEventListener('click', closeMenu);
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    // Tabs
+    function showTab(id, btn) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
