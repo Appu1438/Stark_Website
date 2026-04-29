@@ -1164,54 +1164,53 @@
         </div>
 
         <!-- RIGHT: Form -->
-        <div class="form-col reveal reveal-delay-1">
-          <div class="form-heading">
-            <h2>Send Us a <span>Message</span></h2>
-            <p>Have a question, feedback, or want to get in touch? Fill in the form below and we'll get back to you as
-              soon as possible.</p>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="e.g. Arjun Nair" required>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
           </div>
-          <div class="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label>Your Name</label>
-                <input type="text" name="name" placeholder="e.g. Arjun Nair">
-              </div>
-              <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="you@example.com">
-            </div>
-            <div class="form-group">
-              <label>I'm contacting about</label>
-              <select name="subject">
-                <option value="" disabled selected>Select a topic</option>
-                <option value="Ride Booking Inquiry">Ride Booking Inquiry</option>
-                <option value="Driver Registration">Driver Registration</option>
-                <option value="Customer Support">Customer Support</option>
-                <option value="Feedback">Feedback</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Your Message</label>
-              <textarea rows="5" name="message" placeholder="Tell us how we can help you..."></textarea>
-            </div>
-            <div class="form-submit">
-              <button class="btn-primary" onclick="handleSubmit(event)">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="22" y1="2" x2="11" y2="13" />
-                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                </svg>
-                Send Message
-              </button>
-            </div>
-            <p class="form-note">We typically respond within 24 hours. For urgent ride support, call us directly.</p>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="you@example.com" required>
           </div>
-        </div>
+
+          <div class="form-group">
+            <label>I'm contacting about</label>
+            <select name="subject" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="Ride Booking Inquiry">Ride Booking Inquiry</option>
+              <option value="Driver Registration">Driver Registration</option>
+              <option value="Customer Support">Customer Support</option>
+              <option value="Feedback">Feedback</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea rows="5" name="message" placeholder="Tell us how we can help you..." required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-primary">
+              Send Message
+            </button>
+          </div>
+
+          <p class="form-note">
+            We typically respond within 24 hours. For urgent ride support, call us directly.
+          </p>
+
+        </form>
 
       </div>
     </div>
