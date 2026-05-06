@@ -6,7 +6,7 @@
   <meta name="description"
     content="Contact Stark Cabs for reliable taxi services in Kerala. Reach us for ride bookings, customer support, driver registration or service inquiries. Safe and affordable cab services.">
   <meta name="keywords"
-    content="contact Stark Cabs, taxi service Kerala contact, cab booking Kerala, Stark Cabs phone number, ride booking Kerala, Stark driver support">
+    content="Contact Stark Cabs Kerala, Stark Cabs taxi service, Stark Cabs app, cab booking Kerala, taxi booking Kerala, online taxi booking Kerala, ride booking app Kerala, Kerala cab service, Kerala taxi service, airport taxi Kerala, local taxi Kerala, outstation taxi Kerala, chauffeur service Kerala, premium cab service Kerala, affordable taxi Kerala, 24/7 cab service Kerala, best taxi app Kerala, taxi near me Kerala, cab near me Kerala, ride sharing Kerala, car rental Kerala, airport pickup Kerala, airport drop Kerala, Kochi taxi service, Trivandrum taxi service, Calicut taxi service, Thrissur taxi service, Kannur taxi service, Kollam taxi service, Alappuzha taxi service, Kottayam taxi service, Palakkad taxi service, Malappuram taxi service, Kasaragod taxi service, Pathanamthitta taxi service, Idukki taxi service, Wayanad taxi service, Ernakulam taxi service, Kozhikode taxi service, Thiruvananthapuram taxi service, taxi service Thiruvananthapuram, taxi service Kollam, taxi service Pathanamthitta, taxi service Alappuzha, taxi service Kottayam, taxi service Idukki, taxi service Ernakulam, taxi service Thrissur, taxi service Palakkad, taxi service Malappuram, taxi service Kozhikode, taxi service Wayanad, taxi service Kannur, taxi service Kasaragod, cab service Kochi, cab service Trivandrum, cab service Kozhikode, cab service Thrissur, cab service Kerala airport, Kerala travel taxi, Kerala tourist cab, Kerala travel app, driver app Kerala, Stark Cabs India">
   <meta name="author" content="Stark Cabs">
   <meta name="geo.region" content="IN-KL">
   <meta name="geo.placename" content="Kerala">
@@ -999,6 +999,16 @@
       }
     }
   </style>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MGKMM89D');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -1010,6 +1020,10 @@
 </script>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGKMM89D" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
@@ -1380,25 +1394,59 @@
       };
 
       const btn = e.target;
-      btn.innerText = "Sending...";
+      btn.innerText = "Redirecting...";
 
-      emailjs.send("service_trnx77j", "template_p2x9p1b", data)
-        .then(() => {
-          // btn.innerText = "Message Sent ✅";
-          btn.style.background = '#22c55e';
-          btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Message Sent!';
+      // WhatsApp message
+      const whatsappMessage = `
+╔════════════════════╗
+     ✨ NEW WEBSITE LEAD ✨
+╚════════════════════╝
 
-        })
-        .catch(() => {
-          btn.innerText = "Failed ❌";
-        });
+👤 *Customer Details*
 
-      // setTimeout(() => {
-      //   // btn.innerText = "Send Message";
-      //   btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
-      //   btn.style.background = '';
-      // }, 5000);
+━━━━━━━━━━━━━━━━━━
+🧑 Name     : ${data.name}
+📞 Phone    : ${data.phone}
+📧 Email    : ${data.email}
+📝 Subject  : ${data.subject}
+━━━━━━━━━━━━━━━━━━
+
+💬 *Customer Message*
+
+"${data.message}"
+
+━━━━━━━━━━━━━━━━━━
+🌐 Lead Received From Website
+⏰ ${new Date().toLocaleString()}
+━━━━━━━━━━━━━━━━━━
+`;
+
+      // Encode message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+
+      // WhatsApp number (without spaces)
+      const whatsappNumber = "917399200800";
+
+      // Open WhatsApp
+      window.open(
+        `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+        "_blank"
+      );
+
+      // Button success state
+      btn.style.background = "#22c55e";
+      btn.innerHTML = `
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    Sent to WhatsApp
+  `;
+
+      // Optional: reset form
+      form.reset();
     }
+
     // function handleSubmit(e) {
     //   e.preventDefault();
     //   const btn = e.target;
