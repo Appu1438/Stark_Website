@@ -34,12 +34,6 @@
       padding: 0;
     }
 
-    body::before {
-      pointer-events: none;
-      z-index: 0;
-      /* safer */
-    }
-
     :root {
       --black: #0a0a0b;
       --dark: #111114;
@@ -68,7 +62,6 @@
       overflow-x: hidden;
     }
 
-    /* ── SCROLLBAR ── */
     ::-webkit-scrollbar {
       width: 4px;
     }
@@ -82,7 +75,7 @@
       border-radius: 2px;
     }
 
-    /* ── NOISE OVERLAY ── */
+    /* NOISE OVERLAY */
     body::before {
       content: '';
       position: fixed;
@@ -114,7 +107,7 @@
     .nav-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -167,7 +160,6 @@
       transform: translateY(-1px);
     }
 
-    /* hamburger */
     /* HAMBURGER */
     .hamburger {
       display: none;
@@ -210,7 +202,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 36px;
+      gap: 28px;
       position: fixed;
       inset: 0;
       background: rgba(10, 10, 11, 0.98);
@@ -230,7 +222,7 @@
 
     .mobile-menu a {
       font-family: var(--font-display);
-      font-size: 2rem;
+      font-size: 1.75rem;
       font-weight: 700;
       color: var(--white);
       text-decoration: none;
@@ -299,7 +291,6 @@
       border-color: var(--orange);
     }
 
-
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
@@ -324,7 +315,6 @@
         linear-gradient(180deg, transparent 40%, var(--black) 100%);
     }
 
-    /* Animated orange orb */
     .hero-orb {
       position: absolute;
       width: 700px;
@@ -353,11 +343,12 @@
       position: relative;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 24px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
+      width: 100%;
     }
 
     .hero-badge {
@@ -384,6 +375,7 @@
       background: var(--orange);
       border-radius: 50%;
       animation: pulse 2s infinite;
+      flex-shrink: 0;
     }
 
     @keyframes pulse {
@@ -402,7 +394,7 @@
 
     .hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(3rem, 5.5vw, 5rem);
+      font-size: clamp(2.4rem, 5.5vw, 5rem);
       font-weight: 800;
       line-height: 1.05;
       letter-spacing: -0.03em;
@@ -414,11 +406,10 @@
     .hero h1 em {
       font-style: normal;
       color: var(--orange);
-      position: relative;
     }
 
     .hero-desc {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--muted);
       line-height: 1.75;
       margin-bottom: 40px;
@@ -440,7 +431,7 @@
       background: var(--orange);
       color: var(--white);
       text-decoration: none;
-      padding: 14px 30px;
+      padding: 14px 28px;
       border-radius: 100px;
       font-weight: 600;
       font-size: 0.95rem;
@@ -462,7 +453,7 @@
       background: transparent;
       color: var(--white);
       text-decoration: none;
-      padding: 14px 30px;
+      padding: 14px 28px;
       border-radius: 100px;
       font-weight: 500;
       font-size: 0.95rem;
@@ -484,9 +475,8 @@
       padding-top: 40px;
       border-top: 1px solid var(--border);
       animation: fadeUp 0.8s 0.4s ease both;
+      flex-wrap: wrap;
     }
-
-    .stat-item {}
 
     .stat-num {
       font-family: var(--font-display);
@@ -538,7 +528,7 @@
       margin-bottom: 8px;
     }
 
-    .hero-card p {
+    .hero-card>p {
       font-size: 0.88rem;
       color: var(--muted);
       margin-bottom: 28px;
@@ -623,7 +613,7 @@
       box-shadow: 0 8px 24px rgba(249, 109, 0, 0.3);
     }
 
-    /* ── ANIMATIONS ── */
+    /* ANIMATIONS */
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -648,17 +638,7 @@
       }
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    /* ── SECTION BASE ── */
+    /* SECTION BASE */
     section {
       padding: 100px 0;
     }
@@ -666,7 +646,7 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 32px;
+      padding: 0 24px;
     }
 
     .section-label {
@@ -681,7 +661,7 @@
 
     .section-title {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
       font-weight: 800;
       color: var(--white);
       letter-spacing: -0.025em;
@@ -696,7 +676,7 @@
       margin-top: 16px;
     }
 
-    /* reveal on scroll */
+    /* scroll reveal */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -842,8 +822,6 @@
     }
 
     /* ── SERVICES ── */
-    .services-section {}
-
     .services-header {
       display: flex;
       justify-content: space-between;
@@ -1021,8 +999,6 @@
     }
 
     /* ── WHY CHOOSE ── */
-    .why-section {}
-
     .why-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -1167,7 +1143,6 @@
       color: var(--muted);
     }
 
-    /* Extra 2 cards on second row */
     .testimonials-grid .testi-card:nth-child(4) {
       grid-column: 1;
     }
@@ -1176,9 +1151,128 @@
       grid-column: 2;
     }
 
-    /* ── BLOG ── */
-    .blog-section {}
+    /* ── APP DOWNLOAD ── */
+    .app-section {
+      background: var(--dark);
+      padding: 80px 0;
+    }
 
+    .app-banner {
+      background: linear-gradient(135deg, #1a1006 0%, #1e140a 40%, #1a1006 100%);
+      border: 1px solid rgba(249, 109, 0, 0.15);
+      border-radius: 32px;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-banner::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: 200px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(249, 109, 0, 0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .app-banner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .app-banner h2 span {
+      color: var(--orange);
+    }
+
+    .app-banner>div>p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 460px;
+    }
+
+    .app-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .app-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: var(--white);
+      transition: all 0.25s;
+    }
+
+    .app-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(249, 109, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .app-btn-text small {
+      display: block;
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .app-btn-text strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .driver-cta {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .driver-cta p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .driver-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: var(--white);
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.25s;
+    }
+
+    .driver-cta a:hover {
+      background: var(--orange-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(249, 109, 0, 0.3);
+    }
+
+    /* ── BLOG ── */
     .blog-header {
       display: flex;
       justify-content: space-between;
@@ -1279,127 +1373,6 @@
       gap: 10px;
     }
 
-    /* ── APP DOWNLOAD BANNER ── */
-    .app-section {
-      background: var(--dark);
-      padding: 80px 0;
-    }
-
-    .app-banner {
-      background: linear-gradient(135deg, #1a1006 0%, #1e140a 40%, #1a1006 100%);
-      border: 1px solid rgba(249, 109, 0, 0.15);
-      border-radius: 32px;
-      padding: 60px;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .app-banner::before {
-      content: '';
-      position: absolute;
-      top: -80px;
-      right: 200px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(249, 109, 0, 0.12) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    .app-banner h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -0.025em;
-      line-height: 1.1;
-      margin-bottom: 12px;
-    }
-
-    .app-banner h2 span {
-      color: var(--orange);
-    }
-
-    .app-banner p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      max-width: 460px;
-    }
-
-    .app-buttons {
-      display: flex;
-      gap: 12px;
-      margin-top: 28px;
-      flex-wrap: wrap;
-    }
-
-    .app-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 14px;
-      padding: 12px 20px;
-      text-decoration: none;
-      color: var(--white);
-      transition: all 0.25s;
-    }
-
-    .app-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(249, 109, 0, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .app-btn-text small {
-      display: block;
-      font-size: 0.65rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .app-btn-text strong {
-      display: block;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .driver-cta {
-      text-align: center;
-      flex-shrink: 0;
-    }
-
-    .driver-cta p {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .driver-cta a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--orange);
-      color: var(--white);
-      text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 100px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.25s;
-    }
-
-    .driver-cta a:hover {
-      background: var(--orange-light);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(249, 109, 0, 0.3);
-    }
-
     /* ── FOOTER ── */
     footer {
       background: var(--black);
@@ -1444,7 +1417,6 @@
       justify-content: center;
       text-decoration: none;
       color: var(--muted);
-      font-size: 0.9rem;
       transition: all 0.2s;
     }
 
@@ -1537,20 +1509,16 @@
       color: var(--orange);
     }
 
-    .hamburger.active span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
+    /* ══════════════════════════════════════════
+       RESPONSIVE BREAKPOINTS
+    ══════════════════════════════════════════ */
 
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    /* ── RESPONSIVE ── */
+    /* ── TABLET 1024px ── */
     @media (max-width: 1024px) {
+      .hero-inner {
+        gap: 40px;
+      }
+
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1561,10 +1529,18 @@
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+
+      .about-grid {
+        gap: 48px;
       }
     }
 
+    /* ── TABLET 768px ── */
     @media (max-width: 768px) {
+
+      /* Nav */
       .nav-links {
         display: none;
       }
@@ -1573,108 +1549,454 @@
         display: flex;
       }
 
+      /* Sections */
+      section {
+        padding: 72px 0;
+      }
+
+      .app-section {
+        padding: 60px 0;
+      }
+
+      /* Hero */
+      .hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+      }
+
       .hero-inner {
         grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero-badge {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.95rem;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+        gap: 28px;
+        margin-top: 36px;
+        padding-top: 28px;
       }
 
       .hero-card {
         display: none;
       }
 
+      /* About */
       .about-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
       }
 
+      .about-img-wrap {
+        aspect-ratio: 16/9;
+        max-height: 300px;
+      }
+
+      .about-tag {
+        bottom: 16px;
+        left: 16px;
+        padding: 12px 14px;
+      }
+
+      .about-tag-text strong {
+        font-size: 0.82rem;
+      }
+
+      .about-tag-text span {
+        font-size: 0.68rem;
+      }
+
+      /* Services */
+      .services-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .service-card {
+        padding: 24px 20px;
+      }
+
+      /* How it works */
       .how-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
       }
 
       .how-grid::before {
         display: none;
       }
 
+      .how-header {
+        margin-bottom: 48px;
+      }
+
+      /* Why */
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 40px;
+      }
+
+      /* Testimonials */
       .testimonials-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
       }
 
-      .blog-grid {
-        grid-template-columns: 1fr;
+      .testimonials-grid .testi-card:nth-child(4),
+      .testimonials-grid .testi-card:nth-child(5) {
+        grid-column: auto;
       }
 
+      /* App banner */
       .app-banner {
         grid-template-columns: 1fr;
-        padding: 36px 24px;
+        padding: 36px 28px;
+        text-align: center;
+        gap: 32px;
       }
 
-      .footer-grid {
+      .app-banner>div>p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .app-buttons {
+        justify-content: center;
+      }
+
+      .driver-cta {
+        padding-top: 24px;
+        border-top: 1px solid rgba(249, 109, 0, 0.15);
+        width: 100%;
+      }
+
+      /* Blog */
+      .blog-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .blog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      /* Footer */
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
         gap: 32px;
+        margin-bottom: 40px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .footer-brand p {
+        max-width: 100%;
       }
 
       .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
       }
 
-      .hero-stats {
-        gap: 20px;
+      .footer-bottom>div {
+        justify-content: center;
       }
     }
 
+    /* ── MOBILE 480px ── */
     @media (max-width: 480px) {
-      .services-grid {
-        grid-template-columns: 1fr;
+
+      /* Layout */
+      section {
+        padding: 56px 0;
       }
 
-      .why-grid {
-        grid-template-columns: 1fr;
+      .app-section {
+        padding: 48px 0;
       }
 
-      .how-grid {
-        grid-template-columns: 1fr;
+      .container {
+        padding: 0 18px;
+      }
+
+      /* Hero */
+      .hero {
+        padding: 88px 0 48px;
+      }
+
+      .hero-inner {
+        padding: 0 18px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+        letter-spacing: -0.025em;
+      }
+
+      .hero-desc {
+        font-size: 0.9rem;
+      }
+
+      .hero-badge {
+        font-size: 0.72rem;
+        padding: 5px 13px;
       }
 
       .hero-actions {
         flex-direction: column;
+        gap: 10px;
       }
 
       .btn-primary,
       .btn-ghost {
-        text-align: center;
+        width: 100%;
         justify-content: center;
+        text-align: center;
+        padding: 13px 20px;
+      }
+
+      .hero-stats {
+        gap: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        border-top: 1px solid var(--border);
+        margin-top: 28px;
+        padding-top: 24px;
+      }
+
+      .stat-item {
+        padding: 0 8px;
+        border-right: 1px solid var(--border);
+      }
+
+      .stat-item:last-child {
+        border-right: none;
+      }
+
+      .stat-num {
+        font-size: 1.5rem;
+      }
+
+      .stat-label {
+        font-size: 0.65rem;
+        letter-spacing: 0;
+      }
+
+      /* Section titles */
+      .section-title {
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+      }
+
+      .section-desc {
+        font-size: 0.9rem;
+      }
+
+      /* About */
+      .about-grid {
+        gap: 28px;
+      }
+
+      .about-img-wrap {
+        max-height: 220px;
+      }
+
+      .about-tag {
+        display: none;
+      }
+
+      .about-features {
+        gap: 12px;
+      }
+
+      .about-feature p {
+        font-size: 0.85rem;
+      }
+
+      /* Services */
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .services-header {
+        margin-bottom: 36px;
+      }
+
+      .service-card {
+        padding: 22px 18px;
+      }
+
+      .service-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 18px;
+      }
+
+      /* How it works */
+      .how-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .how-step {
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        text-align: left;
+      }
+
+      .how-num {
+        margin: 0;
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        font-size: 0.9rem;
+      }
+
+      .how-header {
+        margin-bottom: 36px;
+      }
+
+      /* Why */
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      /* Testimonials */
+      .testi-card {
+        padding: 24px;
+      }
+
+      .testi-quote {
+        font-size: 2.4rem;
+        margin-bottom: 12px;
+      }
+
+      /* App banner */
+      .app-banner {
+        padding: 28px 20px;
+        border-radius: 20px;
+        gap: 24px;
+      }
+
+      .app-banner h2 {
+        font-size: 1.5rem;
+      }
+
+      .app-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .app-btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .driver-cta a {
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* Blog */
+      .blog-body {
+        padding: 18px;
+      }
+
+      .blog-title {
+        font-size: 0.95rem;
+      }
+
+      /* Footer */
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      footer {
+        padding: 48px 0 24px;
+      }
+    }
+
+    /* ── SMALL MOBILE 360px ── */
+    @media (max-width: 360px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .stat-num {
+        font-size: 1.3rem;
+      }
+
+      .mobile-menu a {
+        font-size: 1.5rem;
       }
     }
   </style>
 
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Stark Cabs",
-  "alternateName": "Stark Cabs Kerala",
-  "url": "https://starkcabs.in/"
-}
-</script>
-
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Stark Cabs",
+    "alternateName": "Stark Cabs Kerala",
+    "url": "https://starkcabs.in/"
+  }
+  </script>
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Stark Cabs",
-  "url": "https://starkcabs.in/",
-  "logo": "https://starkcabs.in/images/favicon.png"
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Stark Cabs",
+    "url": "https://starkcabs.in/",
+    "logo": "https://starkcabs.in/images/favicon.png"
+  }
+  </script>
   <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-MGKMM89D');</script>
+  <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-MGKMM89D');</script>
   <!-- End Google Tag Manager -->
 </head>
 
@@ -1683,9 +2005,8 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGKMM89D" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- ── NAVBAR ── -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Stark <span>Cabs</span></a>
@@ -1716,7 +2037,7 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- ── HERO ── -->
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-bg"></div>
     <div class="hero-gradient"></div>
@@ -1787,16 +2108,15 @@
             <input type="text" placeholder="Enter destination">
           </div>
         </div>
-        <button class="book-btn" onclick="alert('Download the Stark Rider App to book your ride!')">
-          Book My Ride →
-        </button>
+        <button class="book-btn" onclick="alert('Download the Stark Rider App to book your ride!')">Book My Ride
+          →</button>
         <p style="text-align:center; font-size:0.72rem; color:var(--muted); margin-top:14px;">Or download the app for
           instant booking</p>
       </div>
     </div>
   </section>
 
-  <!-- ── ABOUT ── -->
+  <!-- ABOUT -->
   <section class="about-section">
     <div class="container">
       <div class="about-grid">
@@ -1819,8 +2139,8 @@
         <div class="about-content reveal reveal-delay-1">
           <span class="section-label">About Stark Cabs</span>
           <h2 class="section-title">Reliable Rides,<br>Right Where You Are.</h2>
-          <p class="section-desc">Stark Cabs is a modern ride booking platform based in Kerala, Kerala. We connect
-            passengers with nearby verified drivers instantly through our smart mobile apps — making every journey safe,
+          <p class="section-desc">Stark Cabs is a modern ride booking platform based in Kerala. We connect passengers
+            with nearby verified drivers instantly through our smart mobile apps — making every journey safe,
             comfortable, and stress-free.</p>
           <div class="about-features">
             <div class="about-feature">
@@ -1844,8 +2164,7 @@
               </div>
               <div>
                 <strong>Real-time GPS Tracking</strong>
-                <p>Monitor your ride live from the moment your driver accepts until you arrive safely at your
-                  destination.</p>
+                <p>Monitor your ride live from the moment your driver accepts until you arrive safely.</p>
               </div>
             </div>
             <div class="about-feature">
@@ -1869,7 +2188,7 @@
     </div>
   </section>
 
-  <!-- ── SERVICES ── -->
+  <!-- SERVICES -->
   <section class="services-section">
     <div class="container">
       <div class="services-header">
@@ -1929,7 +2248,7 @@
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F96D00" stroke-width="2">
               <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.07 19.79 19.79 0 0 1 1.61 .45 2 2 0 0 1 3.62 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.07 19.79 19.79 0 0 1 1.61.45 2 2 0 0 1 3.62 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
           </div>
           <h3>24/7 Ride Support</h3>
@@ -1939,41 +2258,49 @@
     </div>
   </section>
 
-  <!-- ── HOW IT WORKS ── -->
+  <!-- HOW IT WORKS -->
   <section class="how-section">
     <div class="container">
       <div class="how-header reveal">
         <span class="section-label">Simple Process</span>
         <h2 class="section-title">How Stark Cabs Works</h2>
-        <p class="section-desc">Getting a reliable ride in Kerala takes just four simple steps through the Stark
-          Rider App.</p>
+        <p class="section-desc">Getting a reliable ride in Kerala takes just four simple steps through the Stark Rider
+          App.</p>
       </div>
       <div class="how-grid">
         <div class="how-step reveal">
           <div class="how-num">1</div>
-          <h3>Download the App</h3>
-          <p>Install the Stark Rider App from the Play Store or App Store to start your journey.</p>
+          <div>
+            <h3>Download the App</h3>
+            <p>Install the Stark Rider App from the Play Store or App Store to start your journey.</p>
+          </div>
         </div>
         <div class="how-step reveal reveal-delay-1">
           <div class="how-num">2</div>
-          <h3>Set Pickup & Drop</h3>
-          <p>Enter your pickup point and destination easily within the app interface.</p>
+          <div>
+            <h3>Set Pickup & Drop</h3>
+            <p>Enter your pickup point and destination easily within the app interface.</p>
+          </div>
         </div>
         <div class="how-step reveal reveal-delay-2">
           <div class="how-num">3</div>
-          <h3>Get Matched</h3>
-          <p>Nearby verified drivers instantly receive your ride request and accept it.</p>
+          <div>
+            <h3>Get Matched</h3>
+            <p>Nearby verified drivers instantly receive your ride request and accept it.</p>
+          </div>
         </div>
         <div class="how-step reveal reveal-delay-3">
           <div class="how-num">4</div>
-          <h3>Enjoy Your Ride</h3>
-          <p>Travel safely and comfortably to your destination with Stark Cabs.</p>
+          <div>
+            <h3>Enjoy Your Ride</h3>
+            <p>Travel safely and comfortably to your destination with Stark Cabs.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── WHY CHOOSE US ── -->
+  <!-- WHY CHOOSE US -->
   <section class="why-section">
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:16px;">
@@ -2043,7 +2370,7 @@
     </div>
   </section>
 
-  <!-- ── TESTIMONIALS ── -->
+  <!-- TESTIMONIALS -->
   <section class="testimonials-section">
     <div class="container">
       <div class="testimonials-header reveal">
@@ -2055,12 +2382,10 @@
       <div class="testimonials-grid">
         <div class="testi-card reveal">
           <div class="testi-quote">"</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span
-              class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
-          <p class="testi-text">I regularly use Stark Cabs for my daily travel in Kerala. The rides are always on
-            time and the drivers are very professional. Highly recommend!</p>
+          <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span
+              class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
+          <p class="testi-text">I regularly use Stark Cabs for my daily travel in Kerala. The rides are always on time
+            and the drivers are very professional. Highly recommend!</p>
           <div class="testi-author">
             <div class="testi-avatar">AN</div>
             <div>
@@ -2071,12 +2396,10 @@
         </div>
         <div class="testi-card reveal reveal-delay-1">
           <div class="testi-quote">"</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span
-              class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
-          <p class="testi-text">The best taxi service in Kerala. Booking a ride with Stark is very easy and the
-            drivers are friendly and helpful every time.</p>
+          <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span
+              class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
+          <p class="testi-text">The best taxi service in Kerala. Booking a ride with Stark is very easy and the drivers
+            are friendly and helpful every time.</p>
           <div class="testi-author">
             <div class="testi-avatar" style="background:linear-gradient(135deg,#e65c00,#f9d423);">SM</div>
             <div>
@@ -2087,12 +2410,10 @@
         </div>
         <div class="testi-card reveal reveal-delay-2">
           <div class="testi-quote">"</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span
-              class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
-          <p class="testi-text">Used Stark Cabs for an airport trip from Kerala — excellent experience. Clean
-            vehicle, smooth booking, and punctual driver.</p>
+          <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span
+              class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
+          <p class="testi-text">Used Stark Cabs for an airport trip from Kerala — excellent experience. Clean vehicle,
+            smooth booking, and punctual driver.</p>
           <div class="testi-author">
             <div class="testi-avatar" style="background:linear-gradient(135deg,#1a1a2e,#16213e);">RK</div>
             <div>
@@ -2103,10 +2424,8 @@
         </div>
         <div class="testi-card reveal">
           <div class="testi-quote">"</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span
-              class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
+          <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span
+              class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
           <p class="testi-text">Very reliable ride booking app. I feel completely safe using Stark Cabs even during
             late-night rides. This is now my first choice.</p>
           <div class="testi-author">
@@ -2119,10 +2438,8 @@
         </div>
         <div class="testi-card reveal reveal-delay-1">
           <div class="testi-quote">"</div>
-          <div class="testi-stars">
-            <span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span
-              class="testi-star">★</span><span class="testi-star">★</span>
-          </div>
+          <div class="testi-stars"><span class="testi-star">★</span><span class="testi-star">★</span><span
+              class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
           <p class="testi-text">The pricing is affordable and drivers arrive quickly. Stark Cabs is now my go-to taxi
             service in Kerala — no other app compares.</p>
           <div class="testi-author">
@@ -2137,7 +2454,7 @@
     </div>
   </section>
 
-  <!-- ── APP DOWNLOAD ── -->
+  <!-- APP DOWNLOAD -->
   <section class="app-section">
     <div class="container">
       <div class="app-banner reveal">
@@ -2183,7 +2500,7 @@
     </div>
   </section>
 
-  <!-- ── BLOG ── -->
+  <!-- BLOG -->
   <section class="blog-section">
     <div class="container">
       <div class="blog-header">
@@ -2204,9 +2521,7 @@
           <img src="https://res.cloudinary.com/starkcab/image/upload/v1776416323/Website%20Images/image_1_osuj00.jpg"
             alt="Best ride booking in Kerala" class="blog-img">
           <div class="blog-body">
-            <div class="blog-meta">
-              <span class="blog-tag">Tips</span>
-              <span class="blog-date" id="blog-date-1"></span>
+            <div class="blog-meta"><span class="blog-tag">Tips</span><span class="blog-date" id="blog-date-1"></span>
             </div>
             <div class="blog-title">Why Stark Cabs is the Best Ride Booking Service in Kerala</div>
             <p class="blog-excerpt">Fast, reliable rides with real-time tracking and verified drivers. Here's what sets
@@ -2218,9 +2533,7 @@
           <img src="https://res.cloudinary.com/starkcab/image/upload/v1776416322/Website%20Images/image_2_i0vwdo.jpg"
             alt="Safe taxi services Kerala" class="blog-img">
           <div class="blog-body">
-            <div class="blog-meta">
-              <span class="blog-tag">Safety</span>
-              <span class="blog-date" id="blog-date-2"></span>
+            <div class="blog-meta"><span class="blog-tag">Safety</span><span class="blog-date" id="blog-date-2"></span>
             </div>
             <div class="blog-title">Safe and Affordable Taxi Services in Kerala</div>
             <p class="blog-excerpt">Travel safely across Kerala with Stark Cabs. Our drivers and vehicles ensure a
@@ -2232,13 +2545,11 @@
           <img src="https://res.cloudinary.com/starkcab/image/upload/v1776416524/Website%20Images/bg_1_dnrffp.jpg"
             alt="Ride booking apps changing transportation" class="blog-img">
           <div class="blog-body">
-            <div class="blog-meta">
-              <span class="blog-tag">Technology</span>
-              <span class="blog-date" id="blog-date-3"></span>
-            </div>
+            <div class="blog-meta"><span class="blog-tag">Technology</span><span class="blog-date"
+                id="blog-date-3"></span></div>
             <div class="blog-title">How Ride Booking Apps Are Changing Transportation</div>
-            <p class="blog-excerpt">Platforms like Stark Cabs are transforming local transportation in Kerala with
-              smart tech and instant driver matching.</p>
+            <p class="blog-excerpt">Platforms like Stark Cabs are transforming local transportation in Kerala with smart
+              tech and instant driver matching.</p>
             <div class="blog-arrow">Read More <span>→</span></div>
           </div>
         </a>
@@ -2246,14 +2557,14 @@
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">Stark <span>Cabs</span></a>
-          <p>A modern ride booking platform providing reliable and affordable cab services in Kerala, Kerala. Our
-            mobile apps connect riders with nearby verified drivers instantly.</p>
+          <p>A modern ride booking platform providing reliable and affordable cab services in Kerala. Our mobile apps
+            connect riders with nearby verified drivers instantly.</p>
           <div class="footer-socials">
             <a href="https://www.instagram.com/stark_cabs?igsh=MTFmN2Nwd3FieHJnMA%3D%3D&utm_source=qr"
               class="social-btn" aria-label="Instagram">
@@ -2341,13 +2652,12 @@
   </footer>
 
   <script>
-    // ── Navbar scroll ──
+    // Navbar scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // ── Mobile menu ──
     // Mobile menu
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -2359,17 +2669,13 @@
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 
-    // ── Scroll reveal ──
+    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.12 });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.10 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // ── Blog dates ──
+    // Blog dates
     function formatDate(d) { return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); }
     const today = new Date();
     const y1 = new Date(); y1.setDate(today.getDate() - 1);
@@ -2378,7 +2684,7 @@
     document.getElementById('blog-date-2').textContent = formatDate(y1);
     document.getElementById('blog-date-3').textContent = formatDate(y2);
 
-    // ── Footer year ──
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
